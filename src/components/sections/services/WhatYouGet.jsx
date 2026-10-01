@@ -19,14 +19,16 @@ function WhatYouGet() {
               <div
                 key={benefit.id}
                 className={
-                  index > 0 ? "border-t border-white/10 pt-8 mt-8" : ""
+                  index > 0
+                    ? "border-t border-white/10 pt-8 mt-8"
+                    : ""
                 }
               >
-                <h3 className="text-xl font-semibold text-white">
+                <h3 className="text-xl font-semibold text-[var(--color-text)]">
                   {benefit.title}
                 </h3>
 
-                <p className="mt-3 leading-7 text-[#b7b7be]">
+                <p className="mt-3 leading-7 text-[var(--color-text-secondary)]">
                   {benefit.description}
                 </p>
               </div>

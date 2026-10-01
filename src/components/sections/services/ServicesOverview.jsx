@@ -17,22 +17,24 @@ function ServicesOverview() {
           {services.map((service) => (
             <article
               key={service.id}
-              className="rounded-2xl border border-white/10 bg-[#161619] p-7"
+              className="rounded-2xl border border-white/10 bg-[var(--color-surface)] p-7"
             >
-              <h3 className="text-xl font-semibold text-white">
+              <h3 className="text-xl font-semibold text-[var(--color-text)]">
                 {service.title}
               </h3>
 
-              <p className="mt-4 leading-7 text-[#b7b7be]">{service.details}</p>
+              <p className="mt-4 leading-7 text-[var(--color-text-secondary)]">
+                {service.details}
+              </p>
 
               <ul className="mt-6 space-y-3 border-t border-white/10 pt-6">
                 {service.features.map((feature) => (
                   <li
                     key={feature}
-                    className="flex items-start gap-3 text-sm leading-6 text-[#b7b7be]"
+                    className="flex items-start gap-3 text-sm leading-6 text-[var(--color-text-secondary)]"
                   >
                     <span
-                      className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-purple-400"
+                      className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[var(--color-brand)]"
                       aria-hidden="true"
                     />
 

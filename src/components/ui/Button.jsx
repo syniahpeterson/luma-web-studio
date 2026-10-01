@@ -5,9 +5,10 @@ function Button({ children, to, href, variant = "primary" }) {
     "inline-flex items-center justify-center rounded-full px-5 py-3 text-sm font-medium transition-colors duration-200";
 
   const variants = {
-    primary: "bg-purple-500 text-white hover:bg-purple-400",
+    primary:
+      "bg-[var(--color-brand)] text-[var(--color-text)] hover:bg-[var(--color-brand-hover)]",
     secondary:
-      "border border-white/10 bg-white/5 hover:border-purple-400/40 hover:bg-white/10",
+      "border border-white/10 bg-white/5 hover:border-[var(--color-brand)]/40 hover:bg-white/10",
   };
 
   const className = `${baseStyles} ${variants[variant]}`;

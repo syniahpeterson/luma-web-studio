@@ -18,12 +18,12 @@ function ServicesPreview() {
           {services.map((service) => (
             <article
               key={service.id}
-              className="rounded-2xl border border-white/10 bg-[#161619] p-6"
+              className="rounded-2xl border border-white/10 bg-[var(--color-surface)] p-6"
             >
-              <h3 className="text-xl font-semibold text-white">
+              <h3 className="text-xl font-semibold text-[var(--color-text)]">
                 {service.title}
               </h3>
-              <p className="mt-3 leading-7 text-[#b7b7be]">
+              <p className="mt-3 leading-7 text-[var(--color-text-secondary)]">
                 {service.description}
               </p>
             </article>

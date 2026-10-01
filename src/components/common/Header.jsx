@@ -17,13 +17,13 @@ function Header() {
   }, []);
 
   const getNavigationClassName = ({ isActive }) =>
-    `relative inline-flex items-center text-[#b7b7be] transition-colors duration-200 after:absolute after:bottom-[-0.5rem] after:left-0 after:h-px after:w-full after:origin-left after:scale-x-0 after:bg-purple-400 after:transition-transform after:duration-300 hover:text-white hover:after:scale-x-100 ${
-      isActive ? "text-purple-300 after:scale-x-100" : ""
+    `relative inline-flex items-center text-[var(--color-text-secondary)] transition-colors duration-200 after:absolute after:bottom-[-0.5rem] after:left-0 after:h-px after:w-full after:origin-left after:scale-x-0 after:bg-[var(--color-brand)] after:transition-transform after:duration-300 hover:text-[var(--color-text)] hover:after:scale-x-100 ${
+      isActive ? "text-[var(--color-brand-soft)] after:scale-x-100" : ""
     }`;
 
   const getMobileNavigationClassName = ({ isActive }) =>
-    `relative block rounded-lg px-3 py-3 text-[#b7b7be] transition-colors duration-200 after:absolute after:bottom-2 after:left-3 after:right-3 after:h-px after:origin-left after:scale-x-0 after:bg-purple-400 after:transition-transform after:duration-300 hover:bg-white/5 hover:text-white hover:after:scale-x-100 ${
-      isActive ? "text-purple-300 after:scale-x-100" : ""
+    `relative block rounded-lg px-3 py-3 text-[var(--color-text-secondary)] transition-colors duration-200 after:absolute after:bottom-2 after:left-3 after:right-3 after:h-px after:origin-left after:scale-x-0 after:bg-[var(--color-brand)] after:transition-transform after:duration-300 hover:bg-white/5 hover:text-[var(--color-text)] hover:after:scale-x-100 ${
+      isActive ? "text-[var(--color-brand-soft)] after:scale-x-100" : ""
     }`;
 
   const closeMenu = () => {
@@ -32,10 +32,10 @@ function Header() {
 
   return (
     <header
-      className={`sticky top-0 z-50 border-b transition-all duration-300 before:absolute before:inset-0 before:bg-gradient-to-b before:from-[#0a0a0b]/90 before:via-[#0a0a0b]/50 before:to-transparent before:opacity-0 before:transition-opacity before:duration-300 before:content-[''] ${
+      className={`sticky top-0 z-50 border-b transition-all duration-300 before:absolute before:inset-0 before:bg-gradient-to-b before:from-[var(--color-background)]/90 before:via-[var(--color-background)]/50 before:to-transparent before:opacity-0 before:transition-opacity before:duration-300 before:content-[''] ${
         isScrolled
           ? "border-transparent bg-transparent backdrop-blur-md before:opacity-100"
-          : "border-white/10 bg-[#0a0a0b]/95"
+          : "border-white/10 bg-[var(--color-background)]/95"
       }`}
     >
       <div className="relative z-10 mx-auto max-w-7xl px-5 py-5 sm:px-6 lg:px-8">
@@ -43,9 +43,9 @@ function Header() {
           <Link
             to="/"
             onClick={closeMenu}
-            className="text-lg font-semibold tracking-tight text-white"
+            className="text-lg font-semibold tracking-tight text-[var(--color-text)]"
           >
-            Luma<span className="text-purple-400">.</span>
+            Luma<span className="text-[var(--color-brand)]">.</span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -67,7 +67,7 @@ function Header() {
                 <Link
                   to="/contact"
                   onClick={closeMenu}
-                  className="block rounded-full bg-purple-500 px-4 py-3 text-center text-sm font-medium text-white transition-colors duration-200 hover:bg-purple-400"
+                  className="block rounded-full bg-[var(--color-brand)] px-4 py-3 text-center text-sm font-medium text-[var(--color-text)] transition-colors duration-200 hover:bg-[var(--color-brand-hover)]"
                 >
                   Start a Project
                 </Link>
@@ -82,7 +82,7 @@ function Header() {
             aria-expanded={isMenuOpen}
             aria-controls="mobile-navigation"
             aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-            className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/10 text-[#b7b7be] transition-colors duration-200 hover:border-white/20 hover:text-white md:hidden"
+            className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/10 text-[var(--color-text-secondary)] transition-colors duration-200 hover:border-white/20 hover:text-[var(--color-text)] md:hidden"
           >
             {isMenuOpen ? (
               <svg
@@ -123,7 +123,7 @@ function Header() {
           <nav
             id="mobile-navigation"
             aria-label="Mobile navigation"
-            className="border-t border-white/10 bg-[#0a0a0b]/95 pt-4 md:hidden"
+            className="border-t border-white/10 bg-[var(--color-background)]/95 pt-4 md:hidden"
           >
             <ul className="flex flex-col gap-1">
               {navigation.map((item) => (
@@ -142,7 +142,7 @@ function Header() {
                 <Link
                   to="/contact"
                   onClick={closeMenu}
-                  className="block rounded-full bg-purple-500 px-4 py-3 text-center text-sm font-medium text-white transition-colors duration-200 hover:bg-purple-400"
+                  className="block rounded-full bg-[var(--color-brand)] px-4 py-3 text-center text-sm font-medium text-[var(--color-text)] transition-colors duration-200 hover:bg-[var(--color-brand-hover)]"
                 >
                   Start a Project
                 </Link>
