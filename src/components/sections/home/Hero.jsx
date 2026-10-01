@@ -1,3 +1,4 @@
+import Container from "../../common/Container";
 import Button from "../../ui/Button";
 
 function Hero() {
@@ -22,7 +23,7 @@ function Hero() {
         }}
       />
 
-      <div className="mx-auto max-w-7xl px-5 py-24 sm:px-6 sm:py-32 lg:px-8 lg:py-40">
+      <Container className="py-24 sm:py-32 lg:py-40">
         <div className="grid items-center gap-16 lg:grid-cols-[1.15fr_0.85fr]">
           {/* Hero Content */}
           <div className="max-w-3xl">
@@ -102,7 +103,7 @@ function Hero() {
             </div>
           </div>
         </div>
-      </div>
+      </Container>
     </section>
   );
 }

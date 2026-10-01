@@ -1,11 +1,13 @@
 import SectionHeading from "../../common/SectionHeading";
+import Container from "../../common/Container";
 
 import processSteps from "../../../data/process";
 
 function Process() {
   return (
     <section className="border-b border-white/10">
-      <div className="mx-auto max-w-7xl px-6 py-24 lg:px-8 lg:py-32">
+      <Container className="py-24 lg:py-32">
+        {" "}
         <div className="max-w-3xl">
           <SectionHeading
             eyebrow="Our Process"
@@ -13,7 +15,6 @@ function Process() {
             description="Our process keeps the project focused, collaborative, and moving toward a finished website without unnecessary complexity."
           />
         </div>
-
         <div className="mt-12 grid gap-6 md:grid-cols-2">
           {processSteps.map((step) => (
             <article
@@ -32,7 +33,7 @@ function Process() {
             </article>
           ))}
         </div>
-      </div>
+      </Container>
     </section>
   );
 }

@@ -1,12 +1,12 @@
 import SectionHeading from "../../common/SectionHeading";
+import Container from "../../common/Container";
 
 import services from "../../../data/services";
 
 function ServicesPreview() {
   return (
     <section className="border-b border-white/10">
-      <div className="mx-auto max-w-7xl px-6 py-24 lg:px-8 lg:py-32">
-        <div className="max-w-3xl">
+<Container className="py-24 lg:py-32">        <div className="max-w-3xl">
           <SectionHeading
             eyebrow="What We Do"
             title="Websites designed around your business."
@@ -29,7 +29,7 @@ function ServicesPreview() {
             </article>
           ))}
         </div>
-      </div>
+      </Container>
     </section>
   );
 }

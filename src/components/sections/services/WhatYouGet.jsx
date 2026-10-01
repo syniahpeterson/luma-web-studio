@@ -1,10 +1,11 @@
 import SectionHeading from "../../common/SectionHeading";
+import Container from "../../common/Container";
 import benefits from "../../../data/benefits";
 
 function WhatYouGet() {
   return (
     <section className="border-b border-white/10">
-      <div className="mx-auto max-w-7xl px-5 py-24 sm:px-6 lg:px-8 lg:py-32">
+      <Container className="py-24 lg:py-32">
         <div className="grid gap-12 lg:grid-cols-2 lg:items-start lg:gap-20">
           <div className="max-w-2xl">
             <SectionHeading
@@ -19,23 +20,21 @@ function WhatYouGet() {
               <div
                 key={benefit.id}
                 className={
-                  index > 0
-                    ? "border-t border-white/10 pt-8 mt-8"
-                    : ""
+                  index > 0 ? "mt-8 border-t border-white/10 pt-8" : ""
                 }
               >
-                <h3 className="text-xl font-semibold text-[var(--color-text)]">
+                <h3 className="text-xl font-semibold text-white">
                   {benefit.title}
                 </h3>
 
-                <p className="mt-3 leading-7 text-[var(--color-text-secondary)]">
+                <p className="mt-3 leading-7 text-[#b7b7be]">
                   {benefit.description}
                 </p>
               </div>
             ))}
           </div>
         </div>
-      </div>
+      </Container>
     </section>
   );
 }

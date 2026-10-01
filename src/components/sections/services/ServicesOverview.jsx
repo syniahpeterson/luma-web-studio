@@ -1,10 +1,11 @@
 import SectionHeading from "../../common/SectionHeading";
+import Container from "../../common/Container";
 import services from "../../../data/services";
 
 function ServicesOverview() {
   return (
     <section className="border-b border-white/10">
-      <div className="mx-auto max-w-7xl px-5 py-24 sm:px-6 lg:px-8 lg:py-32">
+      <Container className="py-24 lg:py-32">
         <div className="max-w-3xl">
           <SectionHeading
             eyebrow="What We Do"
@@ -17,24 +18,22 @@ function ServicesOverview() {
           {services.map((service) => (
             <article
               key={service.id}
-              className="rounded-2xl border border-white/10 bg-[var(--color-surface)] p-7"
+              className="rounded-2xl border border-white/10 bg-[#161619] p-7"
             >
-              <h3 className="text-xl font-semibold text-[var(--color-text)]">
+              <h3 className="text-xl font-semibold text-white">
                 {service.title}
               </h3>
 
-              <p className="mt-4 leading-7 text-[var(--color-text-secondary)]">
-                {service.details}
-              </p>
+              <p className="mt-4 leading-7 text-[#b7b7be]">{service.details}</p>
 
               <ul className="mt-6 space-y-3 border-t border-white/10 pt-6">
                 {service.features.map((feature) => (
                   <li
                     key={feature}
-                    className="flex items-start gap-3 text-sm leading-6 text-[var(--color-text-secondary)]"
+                    className="flex items-start gap-3 text-sm leading-6 text-[#b7b7be]"
                   >
                     <span
-                      className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[var(--color-brand)]"
+                      className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-purple-400"
                       aria-hidden="true"
                     />
 
@@ -45,7 +44,7 @@ function ServicesOverview() {
             </article>
           ))}
         </div>
-      </div>
+      </Container>
     </section>
   );
 }

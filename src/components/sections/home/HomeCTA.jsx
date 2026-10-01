@@ -1,10 +1,10 @@
 import Button from "../../ui/Button";
+import Container from "../../common/Container";
 
 function HomeCTA() {
   return (
     <section>
-      <div className="mx-auto max-w-7xl px-6 py-24 lg:px-8 lg:py-32">
-        <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-[var(--color-surface)] px-6 py-16 text-center sm:px-10 lg:px-16">
+<Container className="py-24 lg:py-32">        <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-[var(--color-surface)] px-6 py-16 text-center sm:px-10 lg:px-16">
           <div className="absolute inset-0 -z-0 bg-[radial-gradient(circle_at_center,var(--color-brand),transparent_55%)] opacity-[0.14]" />
 
           <div className="relative z-10 mx-auto max-w-3xl">
@@ -26,7 +26,7 @@ function HomeCTA() {
             </div>
           </div>
         </div>
-      </div>
+      </Container>
     </section>
   );
 }
