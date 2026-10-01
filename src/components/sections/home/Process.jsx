@@ -7,14 +7,11 @@ function Process() {
   return (
     <section className="border-b border-white/10">
       <Container className="py-24 lg:py-32">
-        {" "}
-        <div className="max-w-3xl">
-          <SectionHeading
-            eyebrow="Our Process"
-            title="A clear path from idea to launch."
-            description="Our process keeps the project focused, collaborative, and moving toward a finished website without unnecessary complexity."
-          />
-        </div>
+        <SectionHeading
+          eyebrow="Our Process"
+          title="A clear path from idea to launch."
+          description="Our process keeps the project focused, collaborative, and moving toward a finished website without unnecessary complexity."
+        />
         <div className="mt-12 grid gap-6 md:grid-cols-2">
           {processSteps.map((step) => (
             <article

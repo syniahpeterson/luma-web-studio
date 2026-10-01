@@ -4,7 +4,8 @@ import Container from "../../common/Container";
 function AboutPreview() {
   return (
     <section className="border-b border-white/10">
-<Container className="py-24 lg:py-32">        <div className="grid gap-12 lg:grid-cols-2 lg:items-center lg:gap-20">
+      <Container className="py-24 lg:py-32">
+        <div className="grid gap-12 lg:grid-cols-2 lg:items-center lg:gap-20">
           <div>
             <p className="text-sm font-medium uppercase tracking-[0.2em] text-[var(--color-brand)]">
               About Luma

@@ -7,13 +7,11 @@ function WhatYouGet() {
     <section className="border-b border-white/10">
       <Container className="py-24 lg:py-32">
         <div className="grid gap-12 lg:grid-cols-2 lg:items-start lg:gap-20">
-          <div className="max-w-2xl">
-            <SectionHeading
-              eyebrow="Why Luma"
-              title="More than just a website."
-              description="We focus on creating websites that are useful to your business, easy for your customers to navigate, and built with a strong foundation for the future."
-            />
-          </div>
+          <SectionHeading
+            eyebrow="Why Luma"
+            title="More than just a website."
+            description="We focus on creating websites that are useful to your business, easy for your customers to navigate, and built with a strong foundation for the future."
+          />
 
           <div>
             {benefits.map((benefit, index) => (

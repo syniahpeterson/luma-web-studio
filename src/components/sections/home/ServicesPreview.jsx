@@ -6,14 +6,12 @@ import services from "../../../data/services";
 function ServicesPreview() {
   return (
     <section className="border-b border-white/10">
-<Container className="py-24 lg:py-32">        <div className="max-w-3xl">
-          <SectionHeading
-            eyebrow="What We Do"
-            title="Websites designed around your business."
-            description="From strategy and design to development and optimization, we build digital experiences that are designed to support your goals."
-          />
-        </div>
-
+      <Container className="py-24 lg:py-32">
+        <SectionHeading
+          eyebrow="What We Do"
+          title="Websites designed around your business."
+          description="From strategy and design to development and optimization, we build digital experiences that are designed to support your goals."
+        />
         <div className="mt-12 grid gap-6 md:grid-cols-3">
           {services.map((service) => (
             <article

@@ -6,13 +6,11 @@ function ServicesOverview() {
   return (
     <section className="border-b border-white/10">
       <Container className="py-24 lg:py-32">
-        <div className="max-w-3xl">
-          <SectionHeading
-            eyebrow="What We Do"
-            title="Services built around your goals."
-            description="Whether you need a new website or want to improve an existing one, our services are designed to create a stronger digital experience for your business and your customers."
-          />
-        </div>
+        <SectionHeading
+          eyebrow="What We Do"
+          title="Services built around your goals."
+          description="Whether you need a new website or want to improve an existing one, our services are designed to create a stronger digital experience for your business and your customers."
+        />
 
         <div className="mt-12 grid gap-6 lg:grid-cols-3">
           {services.map((service) => (
