@@ -15,6 +15,10 @@ const navigation = [
     label: "About",
     to: "/about",
   },
+  {
+    label: "Contact",
+    to: "/contact",
+  },
 ];
 
 export default navigation;
