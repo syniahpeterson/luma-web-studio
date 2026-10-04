@@ -23,7 +23,7 @@ function Button({ children, to, href, variant = "primary" }) {
 
   if (href) {
     return (
-      <a href={href} className={className}>
+      <a href={href} target="_blank" className={className}>
         {children}
       </a>
     );
