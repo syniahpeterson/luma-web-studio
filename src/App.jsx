@@ -3,6 +3,7 @@ import SiteLayout from "./layouts/SiteLayout";
 import Home from "./pages/Home";
 import Services from "./pages/Services";
 import Work from "./pages/Work";
+import CaseStudy from "./pages/CaseStudy";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/services" element={<Services />} />
           <Route path="/work" element={<Work />} />
+          <Route path="/work/:slug" element={<CaseStudy />} />
         </Route>
       </Routes>
     </BrowserRouter>
